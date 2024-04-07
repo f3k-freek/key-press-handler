@@ -1,2 +1,2 @@
 export * as models from "./models";
-export { KeyPressHandler } from "./KeyPressHandler";
+export { KeyPressHandler } from "./key-press-handler";
