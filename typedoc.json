@@ -3,5 +3,6 @@
   "entryPoints": ["./src/index.ts"],
   "out": "docs",
   "tsconfig": "./tsconfig.json",
-  "includeVersion": true
+  "includeVersion": true,
+  "excludePrivate": true
 }
