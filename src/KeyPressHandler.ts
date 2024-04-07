@@ -40,7 +40,7 @@ export class KeyPressHandler {
     return this.#activeKeys.size;
   }
 
-  addKeyBinding(keys: string[], func: KeyCallback): void {
+  addKeyBinding(keys: string[], func: models.KeyCallback): void {
     this.#keyBindings.set(JSON.stringify(keys.sort()), func);
   }
 
