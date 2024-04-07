@@ -1,4 +1,4 @@
-import { KeyCallback } from "./models";
+import { models } from ".";
 
 export class KeyPressHandler {
   #keyHasFired: boolean;
@@ -6,7 +6,7 @@ export class KeyPressHandler {
   #keyStartTime: Map<string, number>;
   #activeKeys: Set<string>;
   #longPressTimeouts: Map<string, ReturnType<typeof setTimeout>>;
-  #keyBindings: Map<string, KeyCallback>;
+  #keyBindings: Map<string, models.KeyCallback>;
 
   #longPressTresholdMilliSeconds: number;
 
@@ -107,7 +107,7 @@ export class KeyPressHandler {
     const action = this.#keyBindings.get(JSON.stringify(activeKeysArray));
     if (action) {
       this.#keyHasFired = true;
-      action(this.#longPress);
+      action(this.#longPress as boolean);
     }
   }
 
