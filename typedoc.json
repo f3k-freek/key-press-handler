@@ -1,0 +1,7 @@
+{
+  "readme": "./README.md",
+  "entryPoints": ["./src/index.ts"],
+  "out": "docs",
+  "tsconfig": "./tsconfig.json",
+  "includeVersion": true
+}

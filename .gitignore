@@ -1,0 +1,9 @@
+node_modules
+lib
+dist
+coverage
+out
+docs
+dist
+build
+.DS_Store
