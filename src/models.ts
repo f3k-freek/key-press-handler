@@ -1,0 +1,1 @@
+type KeyCallback = (longPress: boolean) => void;

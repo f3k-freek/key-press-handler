@@ -1,0 +1,24 @@
+<html>
+  <head> </head>
+
+  <body>
+    <p>Short/long press [z], [x] or a comination of the two</p>
+    <scriptx src="../dist/bundle.js"></scriptx>
+    <script>
+      const keyPressHandler = new window.KeyPressHandler.KeyPressHandler();
+      keyPressHandler.addKeyBinding(["z", "x"], (longPress) => {
+        const duration = longPress ? "long" : "short";
+        alert(`You have ${duration} pressed [z] + [x]`);
+      });
+      keyPressHandler.addKeyBinding(["z"], (longPress) => {
+        const duration = longPress ? "long" : "short";
+        alert(`You have ${duration} pressed [z]`);
+      });
+      keyPressHandler.addKeyBinding(["x"], (longPress) => {
+        const duration = longPress ? "long" : "short";
+        alert(`You have ${duration} pressed [x]`);
+      });
+      keyPressHandler.init();
+    </script>
+  </body>
+</html>

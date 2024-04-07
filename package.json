@@ -1,6 +1,6 @@
 {
-  "name": "name-of-project",
-  "version": "0.0.1",
+  "name": "key-press-handler",
+  "version": "0.0.0",
   "description": "",
   "main": "./dist/index.js",
   "directories": {
@@ -25,7 +25,7 @@
     "test": "./node_modules/.bin/jest --config jestconfig.json",
     "coverage": "./node_modules/.bin/jest --config jestconfig.json --no-colors --ci",
     "build": "tsc && npm run bundle",
-    "bundle": "npx json -I -f tsconfig.json -e 'this.compilerOptions.module=\"CommonJS\"' && browserify ./src/index.ts -p tsify --debug  --standalone ExampleSpace > ./dist/bundle.js && npx json -I -f tsconfig.json -e 'this.compilerOptions.module=\"es2020\"'",
+    "bundle": "npx json -I -f tsconfig.json -e 'this.compilerOptions.module=\"CommonJS\"' && browserify ./src/index.ts -p tsify --debug  --standalone KeyPressHandler > ./dist/bundle.js && npx json -I -f tsconfig.json -e 'this.compilerOptions.module=\"es2020\"'",
     "watch": "tsc-watch --onSuccess 'npm run bundle'",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "eslint . --ext .ts",
